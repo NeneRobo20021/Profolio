@@ -1,0 +1,120 @@
+/* .name是类选择 name是元素选择 #name是id选择 */
+/* :伪类是选择元素特殊状态或位置 */
+body,
+html {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+
+}
+
+header>h1:hover {
+  background-color: aquamarine;
+
+}
+
+/* icon */
+#icon-container {
+  margin-right: 10px;
+  border: 1;
+}
+
+#icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  position: relative;
+  /* 设置相对定位 */
+  padding: 0%;
+}
+
+#icon:hover {
+  opacity: 0;
+  /* 隐藏原始图标 */
+}
+
+#icon:hover:after {
+  opacity: 1;
+  /* 显示悬停时的图片 */
+}
+
+#icon-hover {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  /* 设置绝对定位 */
+  top: 24.5px;
+  left: 8px;
+  opacity: 0;
+  /* 隐藏悬停时的图片 */
+  transition: opacity 0.5s ease;
+}
+
+#icon-hover:hover {
+  opacity: 1;
+}
+
+/* header */
+header>h1 {
+  flex: 3;
+  text-align: center;
+  border: 1px solid black;
+  align-self: stretch;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  height: 100%;
+  background-color: aliceblue;
+  transition: background-color 0.5s ease;
+}
+
+header>h1::before {
+  content: "🍔";
+  margin-right: 10px;
+}
+
+header>nav {
+  flex: 1;
+  border: 1px solid red;
+  text-align: center;
+}
+
+header>nav>a {
+  margin: 10px 10px;
+}
+
+
+/* 主体 */
+#main-aside {
+  display: flex;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+
+#main-content {
+  border: 1px solid blue;
+  flex: 0.99;
+}
+
+/* sidebar */
+#sidebar {
+  border: 1px solid red;
+  width: 200px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  top: 600px;
+  right: 10px;
+}
+
+#sidebar>button {
+  align-items: center;
+}
